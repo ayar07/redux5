@@ -4,13 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookDet from "../BookDet";
 
 
+
 const App = () => {
 
     return (
         <>
             <Router>
                 <Routes>
-                    <Route path="/" element={<><BookList /></>} />
+                   
+                    <Route path="/" element={<BookList />} />
                     <Route path="/posts/:id" element={<><BookDet /></>} />
                     <Route path="*" element={<div>404</div>} />
                 </Routes>

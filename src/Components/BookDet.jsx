@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams, useNavigate } from "react-router-dom"
 import con from "../Components/Post.module.css"
-import fetchBook from "../../src/store/actions/bookDetCreator";
+import fetchBook from "../store/actions/bookDetCreator";
 
 const BookDet = () => {
     const navig = useNavigate();
@@ -24,24 +24,6 @@ const BookDet = () => {
     // if (booksIsError) {
     //     return <div>err: {booksIsError}</div>;
     // }
-
-
-    // useEffect(() => {
-    //     dispatch(setLoading(true));
-
-    //     fetch(`http://localhost:4000/posts/${params.id}`)
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             dispatch(setUsers(data));
-    //         })
-
-    //         .catch((err) => dispatch(setError(err)))
-    //         .finally(() => dispatch(setLoading(false)))
-
-
-    // }, [])
-
-
     return (
         <div>
             {bookIsLoading || !book ? (
@@ -56,4 +38,19 @@ const BookDet = () => {
         </div>
     )
 }
+
+// useEffect(() => {
+//     dispatch(setLoading(true));
+
+//     fetch(`http://localhost:4000/posts/${params.id}`)
+//         .then((response) => response.json())
+//         .then((data) => {
+//             dispatch(setUsers(data));
+//         })
+
+//         .catch((err) => dispatch(setError(err)))
+//         .finally(() => dispatch(setLoading(false)))
+
+
+// }, [])
 export default BookDet;

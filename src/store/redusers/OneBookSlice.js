@@ -8,7 +8,7 @@ const initialState = {
 }
 
 const bookSlice = createSlice({
-    name: "books",
+    name: "book",
     initialState,
     reducers: {},
     extraReducers: (builder) => {
